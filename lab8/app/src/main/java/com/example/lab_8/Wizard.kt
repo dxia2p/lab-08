@@ -2,7 +2,10 @@ package com.example.lab_8
 
 class Wizard(val name: String, var mana: Int, var spellPower: Int) {
     fun train() {
-
+        if (mana >= 5) {
+            spellPower += 1;
+            mana -= 5;
+        }
     }
     fun restoreMana(amount: Int) {
         mana = minOf(100, mana + amount)
